@@ -1,0 +1,386 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+
+/* Header/Navbar */
+header {
+  background: #222;
+  color: #fff;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  background: #0077cc;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  max-width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.slide {
+  min-width: 100%;
+  position: relative;
+  display: none;
+}
+.slide.active {
+  display: block;
+}
+.slide img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+.caption {
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  color: #fff;
+  font-size: 24px;
+  background: rgba(0,0,0,0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Section Defaults */
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Form */
+form input, form textarea {
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  display: block;
+}
+button {
+  padding: 10px 20px;
+  background: #222;
+  color: #fff;
+  border: none;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Services */
+.services-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+}
+.services-container h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #333;
+}
+.service-box {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.service-box:hover {
+  transform: translateY(-5px);
+}
+.service-box h3 {
+  font-size: 1.5em;
+  color: #007BFF;
+  margin-bottom: 10px;
+}
+.service-box p {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Founder Intro */
+.intro-section {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 80px 20px;
+}
+.intro-section h1 {
+  font-size: clamp(2.5em, 5vw, 3.5em);
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.intro-section p {
+  font-size: clamp(1em, 2.5vw, 1.3em);
+  max-width: 700px;
+  margin: 0 auto 25px;
+  line-height: 1.7;
+}
+.founder {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #ffd700;
+  margin-top: 15px;
+}
+
+/* Profile */
+.profile-section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+}
+.profile-image {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile-section h2 {
+  margin-top: 25px;
+  font-size: clamp(1.8em, 4vw, 2.2em);
+  color: #2c5364;
+}
+.profile-section p {
+  font-size: clamp(1em, 2.5vw, 1.2em);
+  max-width: 600px;
+  margin: 20px auto;
+  line-height: 1.7;
+  color: #555;
+  padding: 0 10px;
+}
+
+/* Vision & Mission */
+.vision-mission {
+  background: #f9f9f9;
+  padding: 60px 20px;
+}
+.vm-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.vision-mission h2 {
+  font-size: 2em;
+  color: #2c5364;
+  margin-bottom: 15px;
+}
+.vision-mission p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+/* Testimonials */
+.testimonials {
+  background: #f0f4f8;
+  padding: 60px 20px;
+}
+.testimonials h2 {
+  font-size: 2.5em;
+  color: #2c5364;
+  margin-bottom: 40px;
+}
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.testimonial {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+.testimonial:hover {
+  transform: translateY(-5px);
+}
+.testimonial p {
+  font-size: 1.1em;
+  color: #444;
+  margin-bottom: 15px;
+}
+.testimonial h4 {
+  font-size: 1em;
+  color: #777;
+  font-style: italic;
+}
+
+/* Featured Projects */
+.featured-projects {
+  background: #fff;
+  padding: 60px 20px;
+}
+.featured-projects h2 {
+  font-size: 2.5em;
+  color: #2c5364;
+  margin-bottom: 40px;
+}
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.project-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.project-card h3 {
+  font-size: 1.3em;
+  color: #333;
+  margin-bottom: 10px;
+}
+.project-card p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    background: #222;
+    padding: 20px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .profile-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .testimonial-container,
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .caption {
+    font-size: 18px;
+    left: 20px;
+    bottom: 20px;
+    padding: 8px 16px;
+  }
+
+  .slide img {
+    height: auto;
+  }
+}
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+footer a {
+  color: #00aced;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  footer {
+    padding: 15px;
+    font-size: 14px;
+  }
+}
